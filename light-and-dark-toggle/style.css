@@ -1,120 +1,98 @@
-body{
-	height: 100vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-.toggle-checkbox{
-	position: absolute;
-	opacity: 0;
-	cursor: pointer;
-	height: 0;
-	width: 0;
-}
-.toggle-slot{
-	position: relative;
-	height: 10em;
-	width: 20em;
-	border: 5px solid #e4e7ec;
-	border-radius: 10em;
-	background-color: white;
-	box-shadow: 0px 10px 25px #e4e7ec;
-	transition: background-color 250ms;
-}
-.toggle-checkbox:checked ~ .toggle-slot{
-	background-color: #374151;
-}
-.toggle-button{
-	transform: translate(11.75em,1.75em);
-	position: absolute;
-	height: 6.5em;
-	width: 6.5em;
-	border-radius: 50%;
-	background-color: #ffeccf;
-	box-shadow: inset 0px 0px 0px 0.75em #ffbb52;
-	transition: background-color 250ms,border-color 250ms,transform 1500ms cubic-bezier(.26,2,.46,.71);
 
-}
-.toggle-checkbox:checked ~ .toggle-slot .toggle-button{
-background-color: #485367;
-box-shadow: inset 0px 0px 0px 0.75em white;
-transform: translate(1.75em,1.75em);
-
-}
-
-.sun-icon{
-	position: absolute;
-	height: 6em;
-	width: 6em;
-	color: #ffbb52;
-}
-
-.sun-icon-wrapper{
-	position: absolute;
-	height: 6em;
-	width: 6em;
-	opacity: 1;
-	transform: translate(2em ,2em) rotate(15deg);
-	transform-origin: 50% 50%;
-	transition: opacity 150ms,transform 1500ms cubic-bezier(.26,2,.46,.71)
-}
-
-.toggle-checkbox:checked ~ .toggle-slot .sun-icon-wrapper{
-
-opacity: 0;
-transform: translate(3em,2em) rotate(0deg);
-}
-
-.moon-icon{
-	position: absolute;
-	height: 6em;
-	width: 6em;
-	color: white;
-}
-
-.moon-icon-wrapper{
-	position: absolute;
-	height: 6em;
-	width: 6em;
-	opacity: 0;
-	transform: translate(11em ,2em) rotate(0deg);
-	transform-origin: 50% 50%;
-	transition: opacity 150ms,transform 1500ms cubic-bezier(.26,2,.46,.71)
-}
-
-.toggle-checkbox:checked ~ .toggle-slot .moon-icon-wrapper{
-
-opacity: 1;
-transform: translate(12em,2em) rotate(-15deg);
+*{
+    margin: 0;
 }
 body{
-	transition: 0.2s linear;
+    --background-color: #000;
+    --box-shadow: 0 0 10px 4px #f1f1f1;
+    background: var(--background-color);
+    transition: 0.2s linear;
 }
-body.dark{
-	background: #000;
+body.morning{
+    --background-color: rgb(255, 255, 255);
+    --box-shadow: 0 0 10px 4px #717171;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+.toggle-container{
+    position: relative;
+    width: 200px;
+    height: 100px;
+    border-radius: 50px;
+    box-shadow: var(--box-shadow);
+}
+.toggle{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: inherit;
+    padding-inline: 7px;
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    background-image: url('images/night-bg.png');
+    background-position: center;
+    transition: 0.3s linear;
+}
+.morning .toggle{
+    background-image: url('images/day-bg.png');
+    background-size: inherit;
+}
+.roll-btn{
+    position: absolute;
+    display: block;
+    filter: brightness(0.5);
+    border-radius: 50%;
+    width: 40%;
+    height: 80px;
+    z-index: 1;
+    transition: 0.5s linear;
+    transform: translateX(0);
+}
+.morning .roll-btn{
+    transform: translateX(130%);
+    filter: brightness(1);
+}
+.roll-btn img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.day,
+.night{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 90%;
+    > i {
+        font-size: 50px;
+        transform: rotateZ(220deg);
+    }   
+}
+.day{
+    color: #ffb100;
+    opacity: 0;
+    transition-delay: 0.5s;
+    transition: 0.3s linear;
+}
+.morning .day{
+    transition: 0.3s linear;
+    opacity: 1;
+}
+.night{
+    color: #FFED08;
+    transition: 0.3s linear;
+    transition-delay: 0.5s;
+    opacity: 1;
+}
+.morning .night{
+    transition: 0.3s linear;
+    opacity: 0;
+}
