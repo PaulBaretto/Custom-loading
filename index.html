@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- google fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            --font-Old-Standard: 'Old Standard TT', serif;
+        }
+
+        h1 {
+            font-size: 35px;
+            font-family: var(--font-Old-Standard);
+            font-weight: 700;
+        }
+        hr{
+            position: relative;
+            top: -10px;
+        }
+        .parent-dir{
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .parent-dir p{
+            font-size: 18px;
+            font-family: var(--font-Old-Standard);
+            color: #D0ADF0;
+            text-decoration: none;
+            margin-block: 10px 15px;
+        }
+        h3 {
+            font-family: var(--font-Old-Standard);
+            font-size: 16px;
+            margin-block: 10px 6px;
+        }
+        .wrapper{
+            display: inline-flex;
+            flex-direction: column;
+        }
+        .items {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .items p{
+            font-size: 16px;
+            font-family: var(--font-Old-Standard);
+            color: #3F68F0;
+            text-decoration: none;
+            margin: 2px 0;
+        }
+        a:active{
+            text-decoration: none;
+        }
+        a:focus  p,
+        a:active  p{
+            color: #D0ADF0;
+        }
+        @media only screen and (max-width:440px) {
+            h1 {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Index of C:\Users\Desktop\New Folder</h1>
+    <hr>
+
+    <a class="parent-dir" target="_blank" href="https://paulbaretto.github.io/html-css-js">
+        <span><img src="images/parent-dir.png" alt=""></span>
+        <p>[parent directory]</p>
+    </a>
+    <h3>Name</h3>
+    <div class="wrapper">
+        <a class="items" target="_blank" href="https://paulbaretto.github.io/html-css-js/blog-card-01">
+            <span><img src="images/file-img.png" alt=""></span>
+            <p>blog-card-01/</p>
+        </a>
+        <a class="items" target="_blank" href="https://paulbaretto.github.io/html-css-js/blog-card-02">
+            <span><img src="images/file-img.png" alt=""></span>
+            <p>blog-card-02/</p>
+        </a>
+        <a class="items" target="_blank" href="https://paulbaretto.github.io/html-css-js/coming-soon">
+            <span><img src="images/file-img.png" alt=""></span>
+            <p>coming-soon/</p>
+        </a>
+        <a class="items" target="_blank" href="https://paulbaretto.github.io/html-css-js/custom-loader">
+            <span><img src="images/file-img.png" alt=""></span>
+            <p>custom-loader/</p>
+        </a>
+        <a class="items" target="_blank" href="https://paulbaretto.github.io/html-css-js/images">
+            <span><img src="images/file-img.png" alt=""></span>
+            <p>images/</p>
+        </a>
+        <a class="items" target="_blank" href="https://paulbaretto.github.io/html-css-js/light-and-dark-toggle">
+            <span><img src="images/file-img.png" alt=""></span>
+            <p>light-and-dark-toggle/</p>
+        </a>
+        <a class="items" target="_blank" href="https://paulbaretto.github.io/html-css-js/movie-card">
+            <span><img src="images/file-img.png" alt=""></span>
+            <p>movie-card/</p>
+        </a>
+        <a class="items" target="_blank" href="https://paulbaretto.github.io/html-css-js/music-player">
+            <span><img src="images/file-img.png" alt=""></span>
+            <p>music-player/</p>
+        </a>
+    </div>
+
+</body>
+
+</html>
