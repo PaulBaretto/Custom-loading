@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+}
+
+.our-team-main {
+    overflow-x: hidden;
+}
+
+section.about-us-main-section {
+    position: relative;
+    font-family: "Libre Franklin", sans-serif;
+    --font-libre-franklin:
+        "Libre Franklin", sans-serif;
+    height: 100%;
+    padding-block: 0;
+    height: 100vh;
+}
+
+section.about-us-main-section::before {
+    background-image: url(../images/about-us-bg-img.jpg);
+    background-size: cover;
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(243, 240, 240, 0.251);
+    filter: blur(2px);
+}
+
+.about-us-wrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: 50% 40% 10%;
+    padding-inline: 20px;
+    height: 100%;
+    align-items: center;
+    max-width: 1300px;
+    margin-inline: auto;
+}
+
+#abu-main-section .abu-content {
+    display: grid;
+    gap: 22px;
+    background: #545454b3;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+#abu-main-section .abu-content h2 {
+    font-family: var(--font-libre-franklin);
+    font-weight: 600;
+    font-size: 40px;
+    color: #fff;
+    line-height: normal;
+}
+
+#abu-main-section .abu-content p {
+    font-family: var(--font-libre-franklin);
+    font-weight: 400;
+    font-size: 22px;
+    color: #fff;
+    padding-right: 70px;
+}
+
+#abu-main-section .abu-content .abu-btn-wrap a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    border: 1.5px solid #F1B465;
+    border-radius: 5px;
+    padding: 15px 20px;
+    transition: 0.2s linear;
+    overflow: hidden;
+}
+
+#abu-main-section .abu-content .abu-btn-wrap a::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: -100%;
+    top: 0;
+    background-color: #F1B465;
+    transition: 0.3s linear;
+}
+
+#abu-main-section .abu-content .abu-btn-wrap a:hover::before {
+    left: 0;
+}
+
+#abu-main-section .abu-content .abu-btn-wrap a span {
+    position: relative;
+    font-family: var(--font-libre-franklin);
+    font-weight: 400;
+    font-size: 18px;
+    color: #F1B465;
+    transition: 0.2s linear;
+    z-index: 1;
+
+}
+
+#abu-main-section .abu-content .abu-btn-wrap a:hover span {
+    color: #2c2c2c;
+}
+
+#abu-main-section .about-us-img-wrap {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: end;
+    gap: 34px;
+}
+
+#abu-main-section .about-us-img-wrap .img-holder {
+    height: 500px;
+    position: relative;
+}
+
+#abu-main-section .about-us-img-wrap .img-holder img {
+    height: 100%;
+    border-radius: 20px;
+}
+
+#abu-main-section .about-us-img-wrap .abu-img-border {
+    position: absolute;
+    top: 0;
+    display: block;
+    height: 100%;
+    width: 100%;
+    border: 2px solid #F1B465;
+    border-radius: 20px;
+    transform: translate(45px, 45px);
+    z-index: -1;
+}
+
+.about-us-text-wrap {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+#abu-main-section .abu-holder {
+    display: grid;
+}
+
+#abu-main-section .abu-holder .abu-text {
+    height: 195px;
+    display: flex;
+    align-items: center;
+}
+
+#abu-main-section .abu-holder .abu-text h4 {
+    font-family: var(--font-libre-franklin);
+    font-weight: 700;
+    font-size: 22px;
+    color: #fff;
+    transform: rotate(90deg);
+}
+
+#abu-main-section .abu-holder .abu-line {
+    display: flex;
+    justify-content: center;
+}
+
+#abu-main-section .abu-holder .abu-line span {
+    display: inline-block;
+    height: 170px;
+    width: 2px;
+    background-color: #F1B465;
+}
+
+@media only screen and (max-width:1020px) {
+    .about-us-wrapper {
+        grid-template-columns: 100%;
+        gap: 0;
+    }
+
+    .about-us-content-wrap {
+        order: 2;
+    }
+
+    .about-us-img-wrap {
+        order: 1;
+        margin-bottom: 0;
+    }
+
+}
+
+@media only screen and (max-width:480px) {
+    #abu-main-section .about-us-img-wrap {
+        gap: 25px;
+    }
+
+    #abu-main-section .about-us-img-wrap .img-holder {
+        height: 380px;
+    }
+
+    #abu-main-section .about-us-img-wrap .abu-img-border {
+        transform: translate(25px, 25px);
+    }
+
+    #abu-main-section .abu-holder .abu-text h4 {
+        font-size: 18px;
+    }
+
+    #abu-main-section .abu-content p {
+        padding-right: 0;
+    }
+}
